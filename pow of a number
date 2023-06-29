@@ -1,0 +1,11 @@
+import 'dart:math';
+
+void main(){
+  num result = power(6, 2);
+  print(result);
+}
+num power(num input, num secondInput){
+  num powered = pow(input, secondInput);
+
+  return powered;
+}
