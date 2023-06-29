@@ -1,0 +1,12 @@
+import 'dart:math';
+void main(){
+  num area = findArea(7);
+  print(area);
+}
+num findArea(int radius){
+  num pi = 3.14159;
+  num radiusPow = pow(radius, 2);
+  num area = pi * radiusPow;
+  return area;
+  
+}
