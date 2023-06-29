@@ -1,0 +1,12 @@
+void printEvens(int start, int end){
+  for (start; start<= end; start++){
+    if(start % 2 ==0){
+      continue;
+    }else{
+      print(start);
+    }
+  }
+}
+void main(){
+  printEvens(3, 33);
+}
