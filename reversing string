@@ -1,0 +1,9 @@
+void main(){
+  String result = reverse('lavínia');
+  print(result);
+}
+String reverse(String input){
+  String reversed =input.split('').reversed.join();
+
+  return reversed;
+}
