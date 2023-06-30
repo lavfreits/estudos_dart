@@ -1,0 +1,12 @@
+void main() {
+  Map<String, String> mapp = {
+    'name': 'gana',
+    'phone key': '+55',
+
+  };
+
+  var valuesWithLeng4 = mapp.values.where((value) => value.length ==4).toList();
+  print(mapp);
+  print(valuesWithLeng4);
+
+}
