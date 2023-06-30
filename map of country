@@ -1,0 +1,10 @@
+void main() {
+  Map<String, String> countryInfos = {
+    'country': 'japan',
+    'age': '19',
+    'country key': '+55',
+  };
+  
+  countryInfos['japan'] = 'china';
+  print(countryInfos);
+}
