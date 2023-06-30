@@ -1,0 +1,5 @@
+void main(){
+  List<String> names = ["Apple", "Orange", "Mango"];
+  for(String name in names){
+    print(name);
+}}
