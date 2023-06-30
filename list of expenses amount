@@ -1,0 +1,26 @@
+import 'dart:io';
+
+void main() {
+  num total = 0;
+
+  List<num> expenses = [];
+
+  print("Enter expenses (enter 'q' to quit):");
+  while (true) {
+    String input = stdin.readLineSync().trim();
+
+    if (input.toLowerCase() == 'q') {
+      break;
+    }
+
+    try {
+      num expense = num.parse(input);
+      expenses.add(expense);
+      total += expense;
+    } catch (e) {
+      print("Invalid input. Please enter a valid number or 'q' to quit.");
+    }
+  }
+
+  print("Total expenses: $total");
+}
