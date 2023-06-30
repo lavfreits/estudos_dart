@@ -1,0 +1,11 @@
+void main() {
+  List<String> friends = [];
+
+    friends.addAll(['mafe', 'muri', 'sasa', 'afa', 'sabri','ma', 'lice']);
+    List<String> startsWithA = friends.where((e) => e.startsWith('a')).toList();
+  if(startsWithA.isNotEmpty){
+    print('the names that starts with \'A: $startsWithA');
+  }else{
+    print("there is no name that starts with 'A'");
+  }
+}
