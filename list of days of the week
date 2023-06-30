@@ -1,0 +1,7 @@
+void main() {
+  List<String> days = [];
+
+      days.addAll(['Sunday', 'Wednesday', 'Thursday', 'Tuesday', 'Saturday','Monday', 'Friday']);
+      
+  print("days of the week: $days");
+}
