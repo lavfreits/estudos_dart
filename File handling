@@ -1,0 +1,88 @@
+
+//1. Write a dart program to add your name to "hello.txt" file:
+
+import 'dart:io';
+
+void main() {
+  File file = File('hello.txt');
+  file.writeAsStringSync('Lavínia');
+  print('Name added to "hello.txt" file.');
+}
+
+
+//2. Write a dart program to append your friend's name to a file that already has your name:
+
+import 'dart:io';
+
+void main() {
+  File file = File('hello.txt');
+  file.writeAsStringSync('\nFriend\'s Name', mode: FileMode.append);
+  print('Friend\'s name appended to "hello.txt" file.');
+}
+
+
+//3. Write a dart program to get the current working directory:
+
+import 'dart:io';
+
+void main() {
+  Directory currentDirectory = Directory.current;
+  print('Current working directory: ${currentDirectory.path}');
+}
+
+
+//4. Write a dart program to copy the "hello.txt" file to "hello_copy.txt" file:
+
+import 'dart:io';
+
+void main() {
+  File originalFile = File('hello.txt');
+  File copiedFile = File('hello_copy.txt');
+
+  originalFile.copySync(copiedFile.path);
+  print('File copied successfully: ${copiedFile.path}');
+}
+
+
+//5. Write a dart program to create 100 files using a loop:
+
+import 'dart:io';
+
+void main() {
+  for (int i = 1; i <= 100; i++) {
+    File file = File('file_$i.txt');
+    file.createSync();
+    print('File created: ${file.path}');
+  }
+}
+
+
+//6. Write a dart program to delete the file "hello_copy.txt" (assuming it exists):
+
+import 'dart:io';
+
+void main() {
+  File file = File('hello_copy.txt');
+  file.deleteSync();
+  print('File deleted: ${file.path}');
+}
+
+
+//7. Write a dart program to store name, age, and address of students in a CSV file and read it:
+
+import 'dart:io';
+
+void main() {
+  File file = File('students.csv');
+
+  // Writing data to the file
+  file.writeAsStringSync('Name,Age,Address\n');
+  file.writeAsStringSync('John Doe,25,123 Main St\n', mode: FileMode.append);
+  file.writeAsStringSync('Jane Smith,30,456 Park Ave\n', mode: FileMode.append);
+  print('Data written to "students.csv" file.');
+
+  // Reading data from the file
+  List<String> lines = file.readAsLinesSync();
+  print('Data read from "students.csv" file:');
+  lines.forEach((line) => print(line));
+}
