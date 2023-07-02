@@ -1,0 +1,45 @@
+import 'dart:io';
+
+void main() {
+  List<String> toDo = [];
+
+  while (true) {
+    print('Enter an option:');
+    print('1. Add a task');
+    print('2. Remove a task');
+    print('3. View tasks');
+    print('4. Quit');
+
+    String? option = stdin.readLineSync();
+
+    if (option == '1') {
+      print('Enter a task:');
+      String? task = stdin.readLineSync();
+      if (task != null) {
+        toDo.add(task);
+        print('Task added: $task');
+      }
+    } else if (option == '2') {
+      print('Enter the index of the task to remove:');
+      String? indexInput = stdin.readLineSync();
+      if (indexInput != null) {
+        int index = int.parse(indexInput);
+        if (index >= 0 && index < toDo.length) {
+          String removedTask = toDo.removeAt(index);
+          print('Task removed: $removedTask');
+        } else {
+          print('Invalid index!');
+        }
+      }
+    } else if (option == '3') {
+      print('Tasks:');
+      for (int i = 0; i < toDo.length; i++) {
+        print('$i. ${toDo[i]}');
+      }
+    } else if (option == '4') {
+      break;
+    } else {
+      print('Invalid option!');
+    }
+  }
+}
