@@ -1,5 +1,3 @@
-# estudos_dart
-
 # Dart Tutorial Repository
 
 This repository contains my solutions to the Dart programming questions provided by [Dart Tutorial](https://dart-tutorial.com/introduction-and-basics/). The Dart Tutorial website offers comprehensive learning resources for mastering Dart, the industry's leading language, which is widely used in building quality apps with Flutter.
