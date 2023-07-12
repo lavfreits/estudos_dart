@@ -1,0 +1,28 @@
+class House {
+  num id;
+  String name;
+  num prize; 
+  
+  House(this.id, this.name, this.prize);
+  void printDetails(){
+    print('''ID: $id ,
+Name: $name ,
+Prize: R\$ $prize 
+                      ''');
+  }
+}
+void main() {
+  List<House> houses = [];
+ 
+  House lav = House(22, 'terra', 40000);
+  House marc = House(44, 'nova', 50000);
+  House sab = House(66, 'elegance', 30000);
+  
+  houses.add(lav);
+  houses.add(marc);
+  houses.add(sab);
+  
+  for (House house in houses){
+    house.printDetails();
+  }
+}
