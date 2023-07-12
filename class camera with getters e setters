@@ -1,0 +1,41 @@
+class Camera {
+  num _id, _prize;
+  String _brand;
+  String _color; 
+  
+  
+  Camera(this._id, this._brand, this._color, this._prize);
+  
+  
+  set id(num id) => _id = id;
+  num get id => _id;
+  
+  set prize(num prize) => _prize = prize;
+  num get prize => _prize;
+  
+  set brand(String brand) => _brand = brand;
+  String get brand => _brand;
+  
+  set color(String color) => _color = color;
+  String get color => _color;
+
+
+  void printDetails(){
+    print('''ID: $_id ,
+Brand: $_brand ,
+Color: $_color,
+Prize: $_prize
+''');
+  }
+}
+
+
+void main() {
+  Camera nikon = Camera(66, 'nikon', 'white', 300);
+  Camera camera1 = Camera(1, "Nikon", "Black", 999.99);
+  Camera camera2 = Camera(2, "Canon", "Silver", 799.99);
+
+  camera1.printDetails();
+  camera2.printDetails();
+  nikon.printDetails();
+}
