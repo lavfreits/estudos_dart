@@ -1,0 +1,22 @@
+class Laptop {
+  num id;
+  String name;
+  num ram; 
+  
+  Laptop(this.id, this.name, this.ram);
+  void printDetails(){
+    print('''ID: $id ,
+Name: $name ,
+RAM: $ram GB
+                      ''');
+  }
+}
+void main() {
+  Laptop dell = Laptop(22, 'dell', 4);
+  Laptop linux = Laptop(44, 'linux', 5);
+  Laptop mac = Laptop(66, 'mac', 3);
+  
+  dell.printDetails();
+  mac.printDetails();
+  linux.printDetails();
+}
