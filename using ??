@@ -1,0 +1,7 @@
+int returnZeroIfNeeded(int? parameter) => parameter?? 0;
+
+void main(){
+  int? value = null;
+  int result = returnZeroIfNeeded(value);
+  print(result);
+}
