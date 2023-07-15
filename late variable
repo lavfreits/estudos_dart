@@ -1,0 +1,6 @@
+late String adress;
+
+void main(){
+  adress = 'US';
+  print(adress);
+}
