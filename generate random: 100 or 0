@@ -1,0 +1,8 @@
+import 'dart:math';
+
+int? generateRandom()=> Random().nextBool() ? 100 : null;
+
+void main(){
+  var status = generateRandom() ?? 0;
+  print(status);
+}
