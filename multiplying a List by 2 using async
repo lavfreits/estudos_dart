@@ -1,0 +1,25 @@
+import 'dart:async';
+import 'dart:io';
+
+Future<List<num>> multiply(List<num> inputList) async {
+  await Future.delayed(Duration(seconds:3));
+  List<num> finalList = [];
+  inputList.forEach((num) => finalList.add(num*2));
+  return finalList;
+
+}
+
+void main() async {
+  print('Enter a list of nums: (separated by space)');
+  List<num> list = (stdin.readLineSync()!).split(' ');
+
+  
+  try{
+    List<num> listResult = await multiply(list);
+    print('Sorted list:');
+    listResult.forEach((i) => print(i));
+  }catch(error){
+    print('Error occurred: $error');
+  }
+ 
+}
