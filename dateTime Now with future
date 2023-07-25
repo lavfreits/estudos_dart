@@ -1,0 +1,12 @@
+import 'dart:async';
+
+Future<String> getTimeNow() async {
+  final now = DateTime.now();
+  await Future.delayed(Duration(seconds: 2));
+  return 'Right now is ${now.toString()}';
+}
+
+void main() async {
+  String timeNow = await getTimeNow();
+  print(timeNow);
+}
