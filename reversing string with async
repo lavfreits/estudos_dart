@@ -1,0 +1,19 @@
+import 'dart:async';
+import 'dart:io';
+
+Future<String> reversing(String input) async {
+  await Future.delayed(Duration(seconds:3));
+  return input.split('').reversed.join();
+}
+
+void main() async {
+  print('Enter a string:');
+  String input = stdin.readLineSync()!;
+  
+  try{
+    String reversed = await reversing(input);
+    print('String reversed: ' + reversed);
+  }catch(error){
+    print('Error occurred: $error');
+  }
+}
