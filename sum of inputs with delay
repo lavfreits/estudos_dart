@@ -1,0 +1,24 @@
+import 'dart:async';
+import 'dart:io';
+
+Future<int> sumNums(int num1, int num2) async {
+  await Future.delayed(Duration(seconds:3));
+  return num1 +num2;
+
+}
+
+void main() async {
+  print('Enter the first number:');
+  int num1 = int.parse(stdin.readLineSync()!);
+
+  print('Enter the second number:');
+  int num2 = int.parse(stdin.readLineSync()!);
+  
+  try{
+    int result = await sumNums(num1, num2);
+  print('The sum of $num1 and $num2 is: $result');
+  }catch(error){
+    print('Error occurred: $error');
+  }
+ 
+}
