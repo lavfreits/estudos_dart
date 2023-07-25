@@ -1,0 +1,21 @@
+import 'dart:async';
+import 'dart:io';
+
+Future<List<String>> sorting(List<String> inputString) async {
+  await Future.delayed(Duration(seconds:3));
+  inputlist.sort();
+  return inputList;
+}
+
+void main() async {
+  print('Enter a list of Strings: (separated by space)');
+  List<String> list = (stdin.readLineSync()!).split(' ');
+  
+  try{
+    List<String> sortedList = await sorting(list);
+    print('Sorted list:');
+    sortedList.forEach((String) => print(String));
+  }catch(error){
+    print('Error occurred: $error');
+  }
+}
